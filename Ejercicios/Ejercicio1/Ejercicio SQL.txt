@@ -1,0 +1,37 @@
+Ejercicio 1 (En conjunto)
+
+	- Union de dos tablas (Union) (OK)
+	- Nombrar como alias la union y seleccionar (OK)
+	- Seleccionar Columna fuente de información, suma de valor antes de iva, Periodo_Admon (OK)
+	- Filtrar registos mayores a 400000000 (ok)
+	- Agrupar por fuente de información y periodo admon (ok)
+	- Filtrar por ejecutado (ok)
+
+
+Ejercicio 2: Estudiantes
+
+Mostrar base de datos completa (2022, 2023 y todas las columnas) para el negocio "Admon y Bienestar" 
+evidenciando únicamente el presupuesto.
+
+Ejercicio 3: Estudiantes
+
+Mostrat tabla con total ejecutado (Ejecutado, suma de valor antes de iva)
+
+Ejercicio 4: (En conjunto)
+
+	- Seleccionar las dos tablas (Nombre_Datos y Nombre_Monto)
+	- Efectuar Left Join
+	- Mostrar tabla para montos superiores a 350
+	- Mostrar total
+
+Ejercicio 5: (Estudiantes)
+
+	- Realizar ejercicio de Covid y Conectar base de datos SQL a power bi
+	-  
+
+
+
+
+
+
+

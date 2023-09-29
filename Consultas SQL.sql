@@ -257,3 +257,33 @@ EXEC dbo.sp_help_jobhistory
     @job_name = 'FTP_Reportes' ; 
 GO
 -------------------------------------------------------------------------------------------------------
+-- Para unir dos tablas iguales en columnas y llamar columnas especiales
+select TU.FUENTE_INFORMACIÓN, TU.Suma_de_VALOR_ANTES_IVA, TU.Periodo_Admon from (
+select * from Ejercicio1..Datos1
+UNION
+select * from Ejercicio1..Datos2) TU -- TU es el nombre que se le da a la union, es obligatorio
+-------------------------------------------------------------------------------------------------------
+-- Ejercicio de JOIN
+
+-- Sacar total de Monto
+select sum(Monto) Total_Monto from Ejercicio2..Nombre_Monto
+
+-- Hacer el JOIN
+select A.*, B.Monto from (
+select * from Ejercicio2..Nombre_Datos) A
+left Join (
+select * from Ejercicio2..Nombre_Monto) B
+ON A.Nombre = B.Nombre
+-------------------------------------------------------------------------------------------------------
+/*
+En resumen, este script combina datos de casos y muertes relacionados con COVID-19 de dos tablas diferentes, utilizando la columna "Llave" 
+como punto de unión, y luego muestra los resultados ordenados por el código de país. Esto permite analizar la evolución de casos y muertes 
+por COVID-19 en diferentes países y regiones.
+*/
+select T1.Date_reported,T1.Country_code, T1.Country, T1.WHO_region,T1.New_cases, T1.Cumulative_cases, T2.New_deaths, T2.Cumulative_deaths from (
+select C.* ,CONCAT(C.Date_reported, C.Country) Llave from Ejercicio2..Covid_casos C) T1
+left JOIN (
+select M.* , CONCAT(M.Date_reported, M.Country) Llave from Ejercicio2..Covid_muertes M) T2
+ON T1.Llave = T2.Llave
+ORDER BY T1.Country_code asc
+-------------------------------------------------------------------------------------------------------
