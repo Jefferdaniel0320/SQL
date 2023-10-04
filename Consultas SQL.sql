@@ -287,3 +287,11 @@ select M.* , CONCAT(M.Date_reported, M.Country) Llave from Ejercicio2..Covid_mue
 ON T1.Llave = T2.Llave
 ORDER BY T1.Country_code asc
 -------------------------------------------------------------------------------------------------------
+-- Para Crear vistas o borrarlas:
+--Crear
+CREATE VIEW vw_ventas_Producto AS
+-- Borrar
+DROP VIEW vw_ventas_Producto
+-- Esto se coloca al principio por si existe la vista, la borra y crea una nueva.
+DROP VIEW IF EXISTS vw_ventas_Producto
+-------------------------------------------------------------------------------------------------------

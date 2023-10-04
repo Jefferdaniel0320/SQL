@@ -1,0 +1,31 @@
+Ejercicio SQL - Azure:
+
+	- Aprovisionar grupo de recursos con Servidor y base de datos.
+
+Consulta (Management Studio):
+
+	- Cargar archivos planos (Prod_Cantidad, Descuento, Dirección, Nombre, Precio)
+	- Cargar tabla Prod_Cantidad y agrupar por fecha y id_producto
+	- Cruzar para obtener precio y calcular ganancia (Cantidad * Precio)
+	- Cruzar para obtener nombre de producto
+	- Cruzar para obtener dirección
+	- Hacer consulta sobre la tabla descuento, agrupar por id producto y sacar promedio de columna descuento.
+	- Cruzar con tabla descuento (Paso anterior) y calcular precio final (Precio * Descuento)
+	- Unir con tabla con información 2022
+	- Crear vista de esta consulta (Create View "Nombre_vista" As "Consulta")
+
+Cuestionario:
+
+	- Para el siguiente cuestionario generar las consultas necesarias para obtener la siguiente información:
+		- Total de ventas de Buzos en año 2022 y 2023 y cantidad.
+		- Total de ventas por año (Funcion: YEAR(Date)) y cantidad
+		- Cantidad de proctos por año Organizado por nombre de producto y año (Utilizar función Order By (Columnas) después de Group By)
+		- Total ventas por dirección por año.
+
+
+
+
+
+
+
+
